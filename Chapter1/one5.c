@@ -65,27 +65,79 @@
 // }
 
 // Exercise 1-10
+// int main(void)
+// {
+//   int c;
+
+//   while((c = getchar()) != EOF)
+//   {
+//     if (c == '\t')
+//     {
+//       printf("\\t");
+//     }
+//     else if (c == '\b')
+//     {
+//       printf("\\b");
+//     }
+//     else if (c == '\\')
+//       printf("\\");
+//     else
+//     {
+//       putchar(c);
+//     }
+//   }
+
+//   return 0;
+// }
+
+// Exercise 1-11
+// #define IN 1
+// #define OUT 0
+
+// int main(void)
+// {
+//   int lines, words, characters;
+//   lines = words = characters = 0;
+//   int state = OUT;
+//   int c;
+
+//   while ((c = getchar()) != EOF)
+//   {
+//     if (c != '\n' && c != '\t' && c != ' ' && state == OUT)
+//     {
+//       state = IN;
+//       words++;
+//       characters++;
+//     }
+//     else if (c == '\n' || c == '\t' || c == ' ')
+//     {
+//       state = OUT;
+//       if (c == '\n')
+//       {
+//         lines++;
+//       }
+//     }
+//     else
+//     {
+//       characters++;
+//     }
+//   }
+//   printf("Lines: %i, Words: %i, Characters: %i\n", lines, words, characters);
+// }
+
+// Exercise 1-12
 int main(void)
 {
   int c;
-
   while((c = getchar()) != EOF)
   {
-    if (c == '\t')
+    if (c == ' ' || c == '\t' || c == '\n')
     {
-      printf("\\t");
+      putchar('\n');
     }
-    else if (c == '\b')
-    {
-      printf("\\b");
-    }
-    else if (c == '\\')
-      printf("\\");
     else
     {
       putchar(c);
     }
   }
-
-  return 0;
 }
