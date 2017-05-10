@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 // Exercise 5-1
-int getch(void);
+ int getch(void);
 void ungetch(int c);
 
 #define SIZE 100
