@@ -120,4 +120,5 @@ void strncpyy(char *s, char *t, int n)
   {
     *s++ = *t++;
   }
+  *s = '\0';
 }
