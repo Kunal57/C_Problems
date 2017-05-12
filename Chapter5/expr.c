@@ -22,11 +22,12 @@ int main(int argc, char *argv[])
       int x = pop();
       push(pop() - x);
     }
-    // else if(*argv[0] == '*')
-    // {
-    //   int x = pop();
-    //   push(pop() * x);
-    // }
+    // * needed to be entered as '*' in the command line
+    else if(*argv[0] == '*')
+    {
+      int x = pop();
+      push(pop() * x);
+    }
     else if(*argv[0] == '/')
     {
       int x = pop();
