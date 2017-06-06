@@ -7,11 +7,19 @@ void showMenu(){
   cout << "3. Quit" << endl;
 }
 
-void processSelection(){
+int processSelection(){
   cout << "Enter Command: " << endl;
 
   int input;
   cin >> input;
+
+  return input;
+}
+
+int main(){
+
+  showMenu();
+  int input = processSelection();
 
   switch(input){
     case 1:
@@ -26,12 +34,6 @@ void processSelection(){
     default:
       cout << "Please select an item from the menu." << endl;
   }
-}
-
-int main(){
-
-  showMenu();
-  processSelection();
 
   return 0;
 }
